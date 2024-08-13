@@ -6,7 +6,7 @@ import WebKit
 /// You don't create instances of `WebViewProxy` directly. Instead, your
 /// ``WebViewReader`` receives an instance of `WebViewProxy` in its
 /// `content` view builder.
-@available(iOS 16.4, macOS 13.3, *)
+@available(iOS 16.0, macOS 13.3, *)
 @MainActor
 public final class WebViewProxy: ObservableObject {
     private(set) weak var webView: Remakeable<EnhancedWKWebView>?

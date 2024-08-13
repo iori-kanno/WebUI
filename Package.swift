@@ -7,7 +7,7 @@ let package = Package(
     name: "WebUI",
     platforms: [
         .macOS("13.3"),
-        .iOS("16.4")
+        .iOS("16.0")
     ],
     products: [
         .library(

@@ -17,7 +17,7 @@ import SwiftUI
 ///     }
 /// }
 /// ```
-@available(iOS 16.4, macOS 13.3, *)
+@available(iOS 16.0, macOS 13.3, *)
 public struct WebViewReader<Content: View>: View {
     @StateObject private var proxy = WebViewProxy()
 

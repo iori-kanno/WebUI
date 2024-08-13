@@ -11,7 +11,7 @@ import WebKit
 ///     WebView(url: URL(string: "https://www.example.com")!)
 /// }
 /// ```
-@available(iOS 16.4, macOS 13.3, *)
+@available(iOS 16.0, macOS 13.3, *)
 public struct WebView {
     let configuration: WKWebViewConfiguration
 
@@ -102,7 +102,9 @@ public struct WebView {
     func applyModifiers(to webView: EnhancedWKWebView) {
         webView.uiDelegate = uiDelegate
         webView.navigationDelegate = navigationDelegate
-        webView.isInspectable = isInspectable
+        if #available(iOS 16.4, *) {
+            webView.isInspectable = isInspectable
+        }
         webView.allowsBackForwardNavigationGestures = allowsBackForwardNavigationGestures
         webView.allowsLinkPreview = allowsLinkPreview
         webView.isRefreshable = isRefreshable
